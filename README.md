@@ -6,7 +6,7 @@ In this project, I will demonstrate how to set up two virtual machines (VMs) usi
 <ol>
    <li>Go to the VirtualBox Website:</li>
    <ul>
-      <li>Navigate to the VirtualBox Downloads Page.</li>
+      <li>Navigate to the VirtualBox Downloads Page: https://www.virtualbox.org/wiki/Downloads</li>
       <li>Choose the version that matches your host operating system (Windows, macOS, or Linux).</li>
    </ul>
    <li>Download VirtualBox </li>
@@ -35,9 +35,17 @@ In this project, I will demonstrate how to set up two virtual machines (VMs) usi
       <li>The initial download with be a bunch of numbers instead of the file names.</li>
    </ul>
    <ul>
-      <li>Add pic for comparison. 
          <br/>
       </li>
+   </ul>
+   <ul><li>Original Download</li></ul>
+   <br/>
+   <img src="https://imgur.com/7KT2ggW.png" height="40%" width="40%" alt="script"/>
+   <br/>
+   <ul><li>Renamed Download</li></ul>
+   <br/>
+   <img src="https://imgur.com/rVoTuWD.png" height="40%" width="40%" alt="script"/>
+   <br/>
 </ol>
 <h2>Step 3: Create a New Virtual Machine (Windows 10)</h2>
 <ol>
@@ -59,18 +67,20 @@ In this project, I will demonstrate how to set up two virtual machines (VMs) usi
 <ul>
 <li>Click Next.</li>
 </ul>
+   <br/>
+   <img src="https://imgur.com/Pgy1AUt.png" height="40%" width="40%" alt="script"/>
+   <br/>
 </li></ul>
 <li>Allocate Memory (RAM):</li>
 <ul>
-<li>Select how much RAM you want to allocate. For Windows 10, at least 2 GB (2048 MB) is recommended and click Next.</li>
+<li>Select how much RAM you want to allocate. For Windows 10, at least 2 GB (2048 MB) is recommended. For processor amount, if you have a PC with good RAM, use atleast 4 processors to aid in increased VM speed. If you are unsure you can just use 1 processor and click Next.</li>
 </ul>
+<br/>
+<img src="https://imgur.com/5nfIONS.png" height="40%" width="40%" alt="script"/>
+<br/>   
 <li>Create a Virtual Hard Disk:</li>
 <ul>
 <li>Choose Create a virtual hard disk now and click Create.</li>
-</ul>
-<li>Select the Disk Type:</li>
-<ul>
-<li>Choose VDI (VirtualBox Disk Image) and click Next.</li>
 </ul>
 <li>Select Storage:</li>
 <ul>
@@ -80,6 +90,9 @@ In this project, I will demonstrate how to set up two virtual machines (VMs) usi
 <ul>
 <li>Allocate at least 50 GB for Windows 10 and click Create.</li>
 </ul>
+<br/>
+<img src="https://imgur.com/Z8iJoAq.png" height="40%" width="40%" alt="script"/>
+<br/>    
 </ol>
 <h2>Step 4: Install Windows 10 </h2>
 <ol>
