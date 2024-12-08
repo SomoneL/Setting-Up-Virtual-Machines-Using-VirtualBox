@@ -104,22 +104,30 @@ In this project, I will demonstrate how to set up two virtual machines (VMs) usi
       <li>A window will prompt you to select a start-up disk. Click the folder icon and navigate to the Windows 10 ISO you downloaded.</li>
    </ul>
    <ul>
-      <li>Select the ISO and click Start</li>
+      <li>Select the ISO and Click "Mount and Retry Boot"</li>
    </ul>
+   <br/>
+   <img src="https://imgur.com/bdcVL5v.png" height="40%" width="40%" alt="script"/>
+   <br/>
    <li>Begin the Windows Installation:</li>
    </ul>
    <ul>
       <li>Follow the on-screen prompts to install Windows 10.</li>
    </ul>
    <ul>
+      <li>Which type of installation do you want? - "Custom: Install Windows only (advanced)"</li>
+   </ul>
+    <ul>
+      <li>Where do you want to install Windows? - Select "Drive 0 Unallocated Space" - Click Next.</li>
+   </ul>
+   <ul>
       <li>Choose the appropriate settings, including language, time, and keyboard layout.</li>
    </ul>
-   <img src="https://i.imgur.com/9c335UK.png" height="30%" width="30%" alt="script"/>
+   <img src="https://imgur.com/qnI6FeZ.png" height="30%" width="30%" alt="script"/>
    <li>Create a User:</li>
    <ul>
       <li>During installation, you'll be asked to create a username and password for the new Windows 10 instance.</li>
    </ul>
-   <img src="https://i.imgur.com/pY3M8ON.png" height="30%" width="30%" alt="script"/>
    <li>Complete Installation:</li>
    <ul>
       <li>After the installation finishes, restart the VM. You’ll have a working instance of Windows 10.</li>
@@ -145,18 +153,18 @@ In this project, I will demonstrate how to set up two virtual machines (VMs) usi
    <ul>
       <li>Click Next.</li>
    </ul>
+      <img src="https://imgur.com/r9rOuCo.png" height="30%" width="30%" alt="script"/>
    </li></ul>
    <li>Allocate Memory (RAM):</li>
    <ul>
-      <li>Allocate at least 4 GB (4096 MB) of RAM for Windows Server 2019 and Click Next.</li>
+      <li>Select how much RAM you want to allocate. For Windows Server 2019, at least 4 GB (4096 MB) is recommended. For processor amount, if you have a PC with good RAM, use atleast 4 processors to aid in increased VM speed. If you are unsure you can just use 1 processor and click Next.</li>
    </ul>
+<br/>
+   <img src="https://imgur.com/z4P9Aga.png" height="40%" width="40%" alt="script"/>
+<br/>
    <li>Create a Virtual Hard Disk:</li>
    <ul>
       <li>Choose Create a virtual hard disk now and click Create.</li>
-   </ul>
-   <li>Select the Disk Type:</li>
-   <ul>
-      <li>Choose VDI (VirtualBox Disk Image) and click Next.</li>
    </ul>
    <li>Select Storage:</li>
    <ul>
@@ -166,6 +174,9 @@ In this project, I will demonstrate how to set up two virtual machines (VMs) usi
    <ul>
       <li>Allocate at least 60 GB for Windows Server 2019 and click Create.</li>
    </ul>
+<br/>
+   <img src="https://imgur.com/O2iLUGR.png" height="40%" width="40%" alt="script"/>
+<br/> 
 </ol>
 <h2>Step 6: Install Windows Server 2019</h2>
 <ol>
@@ -174,20 +185,21 @@ In this project, I will demonstrate how to set up two virtual machines (VMs) usi
       <li>Select the new Windows Server 2019 VM and click Start.</li>
    </ul>
    <ul>
-      <li>Select the Windows Server 2019 ISO file as the start-up disk, then click Start.</li>
+      <li>A window will prompt you to select a start-up disk. Click the folder icon and navigate to the Windows Server 2019 ISO you downloaded.
+Select the ISO and Click "Mount and Retry Boot"</li>
    </ul>
    <br/>
-   <img src="https://i.imgur.com/tBsG67J.png" height="40%" width="40%" alt="script"/>
+   <img src="https://imgur.com/9tjz8Oa.png" height="40%" width="40%" alt="script"/>
    <br/>
    <li>Begin Windows Server Installation:</li>
    <ul>
       <li>Follow the on-screen instructions to install Windows Server 2019.</li>
    </ul>
     <ul>
-      <li>Choose the appropriate options for language, time, and keyboard input.</li>
-   </ul>
-    <ul>
       <li>Select Windows Server 2019 Standard (Desktop Experience) as the installation type.</li>
+   </ul>
+   <ul>
+      <li>Choose the appropriate options for language, time, and keyboard input.</li>
    </ul>
 <li>Set Administrator Account:</li>
     <ul>
@@ -220,19 +232,14 @@ In this project, I will demonstrate how to set up two virtual machines (VMs) usi
 <ol>
    <li>Set Network Settings:</li>
    <ul>
-      <li>You can set up the network settings in VirtualBox to allow the two VMs to communicate with each other. Go to Settings > Network for each VM and choose Internal Network or Bridged Adapter based on your needs.</li>
-   </ul>
-   <ul>
-      <li>Add pic for comparison.</li>
+      <li>You can set up the network settings in VirtualBox to allow the two VMs to communicate with each other. Click on one VM at a time and go to Settings > Network for each VM and check "Enable Network Adapter", Attached to: Host-only Adapter, select the available or created adapter of your choice but make sure both VMs have the exact same Network Settins.</li>
    </ul>
    <br/>
-   <img src="https://i.imgur.com/tBsG67J.png" height="40%" width="40%" alt="script"/>
+   <img src="https://imgur.com/b84H3JZ.png" height="40%" width="40%" alt="script"/>
    <br/>
    <li>Ping Between VMs: </li>
    <ul>
-      <li>Open Command Prompt on each VM and ping the other VM to ensure network connectivity. Use the following command:
-
-bashCopy codeping <'IP Address of the Other VM'> </li>
+      <li>Open Command Prompt on each VM and ping the other VM to ensure network connectivity. Use the following command: 'ipconfig' to grab each VMs individual IP. While logged into Windows 10 VM in command prompt, run 'ping -your server 2019 VM IP-'. You should receive a reply indicating the two VMs can communicate over the same network. </li>
    </ul>
     
 </ol>
