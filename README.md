@@ -241,6 +241,26 @@ Select the ISO and Click "Mount and Retry Boot"</li>
    <ul>
       <li>Open Command Prompt on each VM and ping the other VM to ensure network connectivity. Use the following command: 'ipconfig' to grab each VMs individual IP. While logged into Windows 10 VM in command prompt, run 'ping -your server 2019 VM IP-'. You should receive a reply indicating the two VMs can communicate over the same network. </li>
    </ul>
+<ul>
+   <li>Running IP config on Windows 10 VM. The IP address for this VM is:</li>
+   </ul>
+   <br/>
+   <img src="https://imgur.com/b84H3JZ.png" height="40%" width="40%" alt="script"/>
+   <br/>
+   <ul>
+   <li>Running IP config on Windows Server 2019 VM. The IP address for this VM is:</li>
+   </ul>
+   <br/>
+   <img src="https://imgur.com/b84H3JZ.png" height="40%" width="40%" alt="script"/>
+   <br/>
+   <li>Pinging the Server 2019 VM from the Windows 10 VM receiving a successful reply indicating network communication. </li>
+   </ul>
+   <br/>
+   <img src="https://imgur.com/b84H3JZ.png" height="40%" width="40%" alt="script"/>
+   <br/>
+   <ul>
+      <li>TIP: Be sure to turn off Windows Firewall settings in both VMs so they can ping eachother.</li>
+   </ul>
     
 </ol>
 <h2>Step 9: Conclusion</h2>
