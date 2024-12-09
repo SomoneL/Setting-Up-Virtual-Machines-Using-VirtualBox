@@ -230,6 +230,16 @@ Select the ISO and Click "Mount and Retry Boot"</li>
 </ol>
    <h2>Step 8: Test Connectivity Between VMs (Optional)</h2>
 <ol>
+   <li>Configure Network Settings:</li>
+   <ul>
+      <li>You can set up the network settings in VirtualBox to allow the two VMs to communicate with each other but first you will have to create a Host-Only Network in VirtualBox. At the top of the VirtualBox window, click File > Tools > Network Manager. In the tools window, click Create. If one has not already been created, a new one will be. Make sure your 'Adapter' and 'DHCP Server' Properties match these:</li>
+   </ul>
+   <br/>
+   <img src="https://imgur.com/qm1CPuL.png" height="40%" width="40%" alt="script"/>
+   <br/>
+   <br/>
+   <img src="https://imgur.com/0jNkto4.png" height="40%" width="40%" alt="script"/>
+   <br/>
    <li>Set Network Settings:</li>
    <ul>
       <li>You can set up the network settings in VirtualBox to allow the two VMs to communicate with each other. Click on one VM at a time and go to Settings > Network for each VM and check "Enable Network Adapter", Attached to: Host-only Adapter, select the available or created adapter of your choice but make sure both VMs have the exact same Network Settings.</li>
@@ -241,26 +251,35 @@ Select the ISO and Click "Mount and Retry Boot"</li>
    <ul>
       <li>Open Command Prompt on each VM and ping the other VM to ensure network connectivity. Use the following command: 'ipconfig' to grab each VMs individual IP. While logged into Windows 10 VM in command prompt, run 'ping -your server 2019 VM IP-'. You should receive a reply indicating the two VMs can communicate over the same network. </li>
    </ul>
+  <br></br> 
 <ul>
-   <li>Running IP config on Windows 10 VM. The IP address for this VM is:</li>
+   <li>Running ipconfig on Windows 10 VM. The IP address for this VM is: 192.168.56.105 </li>
    </ul>
    <br/>
-   <img src="https://imgur.com/b84H3JZ.png" height="40%" width="40%" alt="script"/>
+   <img src="https://imgur.com/7ho0NxL.png" height="40%" width="40%" alt="script"/>
    <br/>
    <ul>
-   <li>Running IP config on Windows Server 2019 VM. The IP address for this VM is:</li>
+   <li>Running ipconfig on Windows Server 2019 VM. The IP address for this VM is: 192.168.56.106 </li>
    </ul>
    <br/>
-   <img src="https://imgur.com/b84H3JZ.png" height="40%" width="40%" alt="script"/>
+   <img src="https://imgur.com/Rg2asRK.png" height="40%" width="40%" alt="script"/>
    <br/>
    <li>Pinging the Server 2019 VM from the Windows 10 VM receiving a successful reply indicating network communication. </li>
    </ul>
    <br/>
-   <img src="https://imgur.com/b84H3JZ.png" height="40%" width="40%" alt="script"/>
+   <img src="https://imgur.com/GV8iJnd.png" height="40%" width="40%" alt="script"/>
    <br/>
    <ul>
+   <li>Pinging the Windows 10 VM from the Server 2019 VM receiving a successful reply indicating network communication. </li>
+   </ul>
+   <br/>
+   <img src="https://imgur.com/QsjruBy.png" height="40%" width="40%" alt="script"/>
+   <br/>
       <li>TIP: Be sure to turn off Windows Firewall settings in both VMs so they can ping eachother.</li>
    </ul>
+   <br/>
+   <img src="https://imgur.com/zwY7EX8.png" height="40%" width="40%" alt="script"/>
+   <br/>
     
 </ol>
 <h2>Step 9: Conclusion</h2>
