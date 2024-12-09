@@ -153,7 +153,7 @@ In this project, I will demonstrate how to set up two virtual machines (VMs) usi
    <ul>
       <li>Click Next.</li>
    </ul>
-      <img src="https://imgur.com/r9rOuCo.png" height="30%" width="30%" alt="script"/>
+      <img src="https://imgur.com/r9rOuCo.png" height="30%" width="30%" alt="script"/></ol>
    </li></ul>
    <li>Allocate Memory (RAM):</li>
    <ul>
@@ -232,7 +232,7 @@ Select the ISO and Click "Mount and Retry Boot"</li>
 <ol>
    <li>Set Network Settings:</li>
    <ul>
-      <li>You can set up the network settings in VirtualBox to allow the two VMs to communicate with each other. Click on one VM at a time and go to Settings > Network for each VM and check "Enable Network Adapter", Attached to: Host-only Adapter, select the available or created adapter of your choice but make sure both VMs have the exact same Network Settins.</li>
+      <li>You can set up the network settings in VirtualBox to allow the two VMs to communicate with each other. Click on one VM at a time and go to Settings > Network for each VM and check "Enable Network Adapter", Attached to: Host-only Adapter, select the available or created adapter of your choice but make sure both VMs have the exact same Network Settings.</li>
    </ul>
    <br/>
    <img src="https://imgur.com/b84H3JZ.png" height="40%" width="40%" alt="script"/>
